@@ -47,8 +47,18 @@ it('types', () => {
 
 it('strig', () => {
 
-  const str = 'string'
+  const str = 'string test'
 
-  expect(num).to.be.equal('string')
+  expect(str).to.be.equal('string')
+  expect(str).to.contains('test')
+  expect(str).to.match(/test/)
+  expect(str).to.match(/test$/)
+})
 
+it('numbers', () => {
+  const numbers = 4
+
+  expect(numbers).to.be.equal(4)
+  expect(numbers).to.be.above(3)
+  expect(numbers).to.be.below(7)
 })
